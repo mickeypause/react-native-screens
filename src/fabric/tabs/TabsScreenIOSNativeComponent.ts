@@ -41,6 +41,16 @@ export type ItemStateAppearance = {
     | undefined;
   tabBarItemIconColor?: ProcessedColorValue | null | undefined;
   tabBarItemBadgeBackgroundColor?: ProcessedColorValue | null | undefined;
+  tabBarItemBadgeFontFamily?: string | undefined;
+  tabBarItemBadgeFontSize?: CT.Float | undefined;
+  tabBarItemBadgeFontWeight?: string | undefined;
+  tabBarItemBadgeTextColor?: ProcessedColorValue | null | undefined;
+  tabBarItemBadgePositionAdjustment?:
+    | {
+        horizontal?: CT.Float | undefined;
+        vertical?: CT.Float | undefined;
+      }
+    | undefined;
 };
 
 export type ItemAppearance = {
