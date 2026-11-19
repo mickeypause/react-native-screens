@@ -3,7 +3,7 @@
 ## Details
 
 **Description:** Validates the `badgeValue` prop on `TabsScreen` and the
-badge appearance props (`tabBarItemBadgeBackgroundColor` and Android only: `tabBarItemBadgeTextColor`). The scenario covers
+badge appearance props (`tabBarItemBadgeBackgroundColor`; on iOS also `tabBarItemBadgeTextColor`, `tabBarItemBadgeFontFamily`, `tabBarItemBadgeFontSize`, `tabBarItemBadgeFontWeight` and `tabBarItemBadgePositionAdjustment`; on Android `tabBarItemBadgeTextColor`). The scenario covers
 four badge cases: a badge with default system appearance, a
 long numeric string that overflows the max display width, a custom string
 badge, and an emoji badge. For iOS, it also exercises
@@ -114,6 +114,10 @@ color to partially break and incorrectly inherit the selected state's background
 
     - [ ] Tab3 is selected. The badge in the tab bar reads **NEW!**.
     - [ ] The selected tab badge pill is blue, other tabs badges pills are purple.
+    - [ ] The selected tab badge text is yellow, bold, larger than the default
+          (14pt) and shifted slightly right and up compared to its default position.
+    - [ ] Badges of the other (unselected) tabs use the normal state defined by
+          Tab3: navy text in the Courier font, default size and position.
     - [ ] On iOS 26 selected badge pill color is divided into selected (blue) and
           normal (purple), also Tab2 badge is affected and its badge color is partially blue
           (see KI from Note section)
